@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame"
+
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <com.raduetsya.game2048.GameView
+        android:id="@+id/game_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        custom:backgroundColor="#00574B"
+        custom:foregroundColor="#004d40"
+        custom:gridColor="#ffffff"
+        custom:gridMargins="15"
+        custom:gridSpacing="10"
+        custom:roundAngles="8"
+        custom:roundTileAngles="2" />
+
+    <ImageButton
+        android:id="@+id/b1"
+        android:onClick="PlayBackgroundSound"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:text="R"
+        android:src="@drawable/ic_baseline_volume_up_24"
+       />
+
+    <ImageButton
+        android:onClick="StopBackgroundSound"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_toLeftOf="@id/b1"
+        android:text="S"
+        android:src="@drawable/ic_baseline_volume_off_24"
+
+        />
+
+
+
+
+
+</RelativeLayout>
